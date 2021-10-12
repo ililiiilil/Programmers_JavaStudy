@@ -15,4 +15,8 @@
     public Car(String name){
         this.name = name;
     }
+
+    public void run(){
+        System.out.println("달리다.");
+    }
 }
