@@ -7,11 +7,15 @@ public class ExceptionExam2 {
         try{
             int k = divdie(i, j);
             System.out.println(k);
-        }catch(ArithmeticException e){
+        }catch(IllegalArgumentException e){
             System.out.println(e.toString());
         }
     }
-    public static int divdie(int i, int j) throws ArithmeticException{
+    public static int divdie(int i, int j) throws IllegalArgumentException{
+        if (j == 0) {
+            throw new IllegalArgumentException("0으로 나눌 수 없습니다.");
+        }
+        
         int k = i / j;
         return k;
     }
